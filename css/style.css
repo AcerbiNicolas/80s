@@ -79,7 +79,7 @@
   body{
   
     font-family: "Inconsolata", monospace;
-    background-color: rgb(186, 15, 15);
+    background-color: rgb(42, 42, 42);
     color: white;
     grid-template-areas: 
     'header header header header header'
