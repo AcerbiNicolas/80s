@@ -12,6 +12,10 @@
     display: block;
     text-align: center;
   }
+  .menuPaginas{
+    padding-left: 0;
+    padding-right: 0;
+  }
   .menuPaginas li{
     list-style: none;
   }
@@ -179,7 +183,7 @@
   background-color: rgb(47, 47, 47);
 }
 .menuPaginas li a:hover{
-  color: rgb(137, 0, 200);
+  color: rgba(255, 213, 27, 0.834);
 }
 footer {
   bottom: 5px;
