@@ -83,6 +83,22 @@
     height: 400px;
     max-height: 500px;
   }
+  .links-contacto{
+    justify-content: center;
+    text-align: center;
+  }
+  .facebook{
+    display: inline-block;
+  }
+  .twitter{
+    display: inline-block;
+  }
+  .telegram{
+    display: inline-block;
+  }
+  .copy{
+    text-align: center;
+  }
 }
 @media screen and (min-width: 768px){                                 /* laptop*/
   body{
@@ -200,6 +216,42 @@
     display: block;
     margin-top:30px ;
     height: 83px;
+  }
+  .facebook a{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  .twitter a{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  .telegram a{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .facebook{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  .twitter{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  .telegram{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .copy{
+    display: block;
+    text-align: center;
   }
 }
 html{                                                                            /* general*/
