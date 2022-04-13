@@ -10,6 +10,7 @@
     display: block;
     text-align: center;
   }
+  
   .menuPaginas{
     padding-left: 0;
     padding-right: 0;
@@ -217,38 +218,9 @@
     margin-top:30px ;
     height: 83px;
   }
-  .facebook a{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
+  .links-contacto{
+    width: 120px;
   }
-  .twitter a{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-  }
-  .telegram a{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-  }
-
-  .facebook{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-  }
-  .twitter{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-  }
-  .telegram{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-  }
-
   .copy{
     display: block;
     text-align: center;
