@@ -158,6 +158,12 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .sectMusic{
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .music div {
     display: inline-block;
     max-width: auto;
