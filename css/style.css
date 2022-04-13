@@ -23,6 +23,10 @@
     display: block;
     font-size: 28px;
   }
+  .sectMusic h2{
+    text-align: center;
+    color: black;
+  }
   .music div {
     max-width: 100%;
   }
