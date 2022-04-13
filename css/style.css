@@ -1,6 +1,5 @@
 @media screen and (max-width: 767px){                                 /* Mobile*/
   body{
-  
     font-family: "Inconsolata", monospace;
     display: flexbox;
     margin: 0;
@@ -10,7 +9,6 @@
     display: block;
     text-align: center;
   }
-  
   .menuPaginas{
     padding-left: 0;
     padding-right: 0;
