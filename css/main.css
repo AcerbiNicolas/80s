@@ -102,8 +102,8 @@
 @media screen and (min-width: 768px){                                 /* laptop*/
   body{
     font-family: "Inconsolata", monospace;
-    background-color: rgb(42, 42, 42);
-    color: white;
+    background-color: white;
+    color: black;
     grid-template-areas: 
     'header header header header header'
     'menu menu menu menu menu'

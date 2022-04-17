@@ -1,0 +1,26 @@
+{
+  "name": "los80s",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AcerbiNicolas/80s.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AcerbiNicolas/80s/issues"
+  },
+  "homepage": "https://github.com/AcerbiNicolas/80s#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
+}
