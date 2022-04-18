@@ -262,7 +262,3 @@ ul{
 .indexMedia:hover{
   animation: pulse 5s infinite;
 }
-.title{
-  animation: flipInX; 
-  animation-duration: 2s;
-}
