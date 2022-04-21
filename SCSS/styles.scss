@@ -86,7 +86,147 @@ $marginGeneral:10px;
             margin:10px 30px;
             border-radius: 3px;
             border: 1px solid rgba(182, 182, 182, 0.315);
-            animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+            animation: backInLeft; 
+            animation-duration: 2s;
+            background-color: $headerBackground;
+        }
+        footer{
+            display: block;
+            flex-wrap: wrap;
+            width: $ancho;
+            text-align: center;
+            position:relative;
+            bottom: 0;
+            .logo{
+                img{
+                    animation: pulse 1s infinite;
+                }
+            }
+            .copy{
+                text-align: end;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){                                 /* Mobile*/
+    
+    body{
+        font-family: "Inconsolata", monospace;
+        display: flexbox;
+        flex-wrap: wrap;
+
+        .encabezado{
+            margin-left: auto;
+            margin-right: auto;
+            width: $ancho;
+            .logo{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                justify-content: center;
+                text-align: center;
+                animation: fadeInRightBig; 
+                animation-duration: 2s;
+                
+                img{
+                    animation: pulse 1s infinite;
+                }
+                
+            }
+            .container-fluid{
+                text-align: center;
+            }
+        }
+        .indexSect{
+            text-align: center;
+            margin: $marginGeneral 20px;
+        }
+        .quest{
+            margin-top: 10px;
+            padding: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            div{
+                border-radius: 14px;
+                border: 0.5px solid black;
+                margin: 10px 0;
+            }
+        }
+        .sectMusic{
+            display: inline-block;
+            justify-content: center;
+            text-align: center;
+            margin-left: 0;
+            margin-right: 0;
+            #main{
+                display: inline-block;
+            }
+            div{
+                display: inline-block;
+                width: 300px;
+            }
+            iframe{
+                flex-wrap: wrap;
+                width: 300px;
+                text-align: center;
+            }
+            margin: $marginGeneral * 3;
+            margin-bottom: 400px;
+        }
+        .medio{
+            margin-left: 250px;
+            margin-right: 250px;
+            
+            .carousel{
+                justify-content: center;
+                text-align: center;
+                .carousel-item{
+                    img{
+                        border-radius: 40px;
+                        max-height: 400px;
+                    }
+                    
+                }
+                
+                position: relative;
+            }
+            margin-bottom: 10px;
+        }
+        .carousel-control-next{
+            margin-right: 200px;
+        }
+        .carousel-control-prev{
+            margin-left: 200px;
+        }
+        
+        .innova{
+            text-align: center;
+            margin: $marginGeneral*3;
+            p{
+                margin: $marginGeneral*6;
+            }
+            img{
+                margin-bottom: 5px;
+                max-width: 400px;
+            }
+            article{
+                border: 1px solid black;
+                border-radius: 12px;
+                margin: $marginGeneral 0;
+            }
+        }
+        .row{
+            margin: $marginGeneral*4;
+        }
+        .backleft{
+            display: block;
+            text-align: center;
+            justify-content: center;
+            margin:10px 30px;
+            border-radius: 3px;
+            border: 1px solid rgba(182, 182, 182, 0.315);
+            animation: backInLeft; 
             animation-duration: 2s;
             background-color: $headerBackground;
         }
