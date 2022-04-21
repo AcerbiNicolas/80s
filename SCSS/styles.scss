@@ -1,42 +1,110 @@
-@import "contacto";
 @import "index";
-@import "imagenes";
-@import "innovaciones";
-@import "musica";
 
-$headerBackground: rgb(215, 215, 215);
+$headerBackground: rgb(240, 240, 240);
 $costados: 40px;
+$ancho: 100%;
+$marginGeneral:10px;
 
-.backleft{
-    display: block;
-    text-align: center;
-    justify-content: center;
+@media screen and (max-width: 767px){                                 /* Mobile*/
     
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: $costados;
-    padding-right: $costados;
-
-    margin: 0 0.5rem;
-    margin-bottom: 15px;
-    margin-top: 15px;
-
-    border-radius: 19px;
-    border: 1px solid black;
-
-    animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s;
-
-    background-color: $headerBackground;
-}
-.logo{
-    animation: fadeInRightBig; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s;
-}
-html{
     body{
-        header{
+        font-family: "Inconsolata", monospace;
+        display: flexbox;
+        flex-wrap: wrap;
+
+        .encabezado{
+            margin-left: auto;
+            margin-right: auto;
+            width: $ancho;
+            .logo{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                justify-content: center;
+                text-align: center;
+                animation: fadeInRightBig; 
+                animation-duration: 2s;
+                
+                img{
+                    animation: pulse 1s infinite;
+                }
+                
+            }
+            .container-fluid{
+                text-align: center;
+            }
+        }
+        .indexSect{
+            text-align: center;
+            margin: $marginGeneral 20px;
+        }
+        .quest{
+            margin-top: 10px;
+            padding: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            div{
+                border-radius: 14px;
+                border: 0.5px solid black;
+                margin: 10px 0;
+            }
+        }
+        .sectMusic{
+            margin: $marginGeneral * 3;
+        }
+        .carousel{
+            img{
+                border-radius: 30px;
+                max-height: 200px;
+            }
+            position: relative;
+            margin: $marginGeneral*4 $marginGeneral*2;
+        }
+        .innova{
+            text-align: center;
+            margin: $marginGeneral*3;
+            p{
+                margin: $marginGeneral;
+            }
+            img{
+                margin-bottom: 5px;
+                max-width: 200px;
+            }
+            article{
+                border: 1px solid black;
+                border-radius: 12px;
+                margin: $marginGeneral 0;
+            }
+        }
+        .row{
+            margin: $marginGeneral*4;
+        }
+        .backleft{
+            display: block;
+            text-align: center;
+            justify-content: center;
+            margin:10px 30px;
+            border-radius: 3px;
+            border: 1px solid rgba(182, 182, 182, 0.315);
+            animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
+            animation-duration: 2s;
             background-color: $headerBackground;
+        }
+        footer{
+            display: block;
+            flex-wrap: wrap;
+            width: $ancho;
+            text-align: center;
+            position:relative;
+            bottom: 0;
+            .logo{
+                img{
+                    animation: pulse 1s infinite;
+                }
+            }
+            .copy{
+                text-align: end;
+            }
         }
     }
 }

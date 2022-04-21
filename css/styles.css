@@ -1,25 +1,78 @@
-.backleft {
-  display: block;
-  text-align: center;
-  justify-content: center;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin: 0 0.5rem;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  border-radius: 19px;
-  border: 1px solid black;
-  animation: backInLeft;
-  /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s;
-  background-color: #d7d7d7; }
-
-.logo {
-  animation: fadeInRightBig;
-  /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; }
-
-html body header {
-  background-color: #d7d7d7; }
+@media screen and (max-width: 767px) {
+  /* Mobile*/
+  body {
+    font-family: "Inconsolata", monospace;
+    display: flexbox;
+    flex-wrap: wrap; }
+    body .encabezado {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%; }
+      body .encabezado .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        text-align: center;
+        animation: fadeInRightBig;
+        animation-duration: 2s; }
+        body .encabezado .logo img {
+          animation: pulse 1s infinite; }
+      body .encabezado .container-fluid {
+        text-align: center; }
+    body .indexSect {
+      text-align: center;
+      margin: 10px 20px; }
+    body .quest {
+      margin-top: 10px;
+      padding: 20px;
+      margin-bottom: 10px;
+      text-align: center; }
+      body .quest div {
+        border-radius: 14px;
+        border: 0.5px solid black;
+        margin: 10px 0; }
+    body .sectMusic {
+      margin: 30px; }
+    body .carousel {
+      position: relative;
+      margin: 40px 20px; }
+      body .carousel img {
+        border-radius: 30px;
+        max-height: 200px; }
+    body .innova {
+      text-align: center;
+      margin: 30px; }
+      body .innova p {
+        margin: 10px; }
+      body .innova img {
+        margin-bottom: 5px;
+        max-width: 200px; }
+      body .innova article {
+        border: 1px solid black;
+        border-radius: 12px;
+        margin: 10px 0; }
+    body .row {
+      margin: 40px; }
+    body .backleft {
+      display: block;
+      text-align: center;
+      justify-content: center;
+      margin: 10px 30px;
+      border-radius: 3px;
+      border: 1px solid rgba(182, 182, 182, 0.315);
+      animation: backInLeft;
+      /* referring directly to the animation's @keyframe declaration */
+      animation-duration: 2s;
+      background-color: #f0f0f0; }
+    body footer {
+      display: block;
+      flex-wrap: wrap;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      bottom: 0; }
+      body footer .logo img {
+        animation: pulse 1s infinite; }
+      body footer .copy {
+        text-align: end; } }

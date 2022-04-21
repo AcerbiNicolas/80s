@@ -78,72 +78,52 @@
 
     <h1 class="backleft">Contacto</h1>
 
-    <section>
-      <article>
-        <form action="#" class="formulario">
-          <label for="email">
-            Inserte su email:
-            <input
-              type="email"
-              placeholder="ej. mario@gmail.com"
-              name="email"
-            />
+    <div class="row g-3">
+      <label for="inputEmail4" class="form-label">Datos personales</label>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+      </div>
+    </div>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Contrasena</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Email</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Confirmar email</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Codigo postal</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Suscribirme a mas noticias
           </label>
-          <label for="edad">
-            Elija su edad:
-            <input type="number" placeholder="ej. 21" />
-          </label>
-
-          <div>
-            <p>Determine su genero</p>
-            <div>
-              Masculino
-              <input type="radio" name="lado" value="izquierda" />
-            </div>
-            <div>
-              Femenino
-              <input type="radio" name="lado" value="derecha" />
-            </div>
-            <div>
-              Otro
-              <input type="radio" name="lado" value="derecha" />
-            </div>
-          </div>
-          <div class="pais">
-            <p>De que pais eres?</p>
-            <select name="pais" id="pais">
-              <option value="Argentina">Argentina</option>
-              <option value="Bolivia">Bolivia</option>
-              <option value="Peru">Peru</option>
-            </select>
-          </div>
-
-          <div class="notif">
-            <p>
-              Queres recibir notificaciones sobre alguna actualizacion de
-              nuestro sitio?
-            </p>
-            <input type="checkbox" name="acepta" value="1" />
-          </div>
-
-          <label for="opinion">
-            <p>opinion del sitio:</p>
-            <textarea placeholder="Opine sobre el sitio"></textarea>
-          </label>
-
-          <input
-            class="boton-finPagina"
-            type="reset"
-            value="Reestablecer sitio"
-          />
-          <input
-            class="boton-finPagina"
-            type="submit"
-            value="Enviar formulario"
-          />
-        </form>
-      </article>
-    </section>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </div>
+    </form>
 
     <footer class="footer">
       <div>
