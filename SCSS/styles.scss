@@ -1,9 +1,35 @@
 @import "index";
-
-$headerBackground: rgb(240, 240, 240);
+$headerBackground: #f0f0f0;
 $costados: 40px;
 $ancho: 100%;
 $marginGeneral:10px;
+
+$colors: (
+    lemonCash: #15ff0063,
+    twitch: #9200957c,
+); 
+@mixin sizes($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+@each $name-color, $bgcolor in $colors {
+    .btn--#{$name-color} {
+        background-color: $bgcolor;
+        border-radius:28px;
+        border:1px solid #18ab2900;
+        display:inline-block;
+        cursor:pointer;
+        color:#000000;
+        font-size:17px;
+        @include sizes(0px, 10px 11px);
+        text-decoration:none;
+    }
+}
+@each $name-color, $bgcolor in $colors {
+    .btn--#{$name-color}:hover{
+        background-color: cyan;
+    }
+}
 
 @media screen and (max-width: 767px){                                 /* Mobile*/
     
@@ -36,7 +62,7 @@ $marginGeneral:10px;
         }
         .indexSect{
             text-align: center;
-            margin: $marginGeneral 20px;
+            margin: headerBac 20px;
         }
         .quest{
             margin-top: 10px;
@@ -102,8 +128,13 @@ $marginGeneral:10px;
                     animation: pulse 1s infinite;
                 }
             }
-            .copy{
+            .redes{
+                display: block;
+                position: relative;
                 text-align: end;
+            }
+            .copy{
+                text-align: start;
             }
         }
     }
@@ -120,13 +151,13 @@ $marginGeneral:10px;
             margin-left: auto;
             margin-right: auto;
             width: $ancho;
+            text-align: center;
             .logo{
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
                 justify-content: center;
                 text-align: center;
-                animation: fadeInRightBig; 
                 animation-duration: 2s;
                 
                 img{
@@ -136,6 +167,12 @@ $marginGeneral:10px;
             }
             .container-fluid{
                 text-align: center;
+            }
+            .primLogo{
+                img{
+                    animation: pulse 1s infinite;
+                };
+                
             }
         }
         .indexSect{
@@ -226,9 +263,18 @@ $marginGeneral:10px;
             margin:10px 30px;
             border-radius: 3px;
             border: 1px solid rgba(182, 182, 182, 0.315);
-            animation: backInLeft; 
-            animation-duration: 2s;
             background-color: $headerBackground;
+        }
+        .primTitulo{
+            display: block;
+            justify-content: center;
+            margin:10px 30px;
+            border-radius: 3px;
+            border: 1px solid rgba(182, 182, 182, 0.315);
+            background-color: $headerBackground;
+            text-align: center;
+            animation: fadeInRightBig;
+            animation-duration: 2s;
         }
         footer{
             display: block;
@@ -242,8 +288,13 @@ $marginGeneral:10px;
                     animation: pulse 1s infinite;
                 }
             }
-            .copy{
+            .redes{
+                display: block;
+                position: relative;
                 text-align: end;
+            }
+            .copy{
+                text-align: start;
             }
         }
     }
