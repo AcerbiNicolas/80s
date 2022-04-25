@@ -39,6 +39,9 @@ $colors: (
 
 
 @media screen and (max-width: 767px){                                 /* Mobile*/
+    $bordes:(
+        colores:rgb(0, 0, 0)
+    );
     %logo-animation{
         display: block;
         margin-left: auto;
@@ -92,7 +95,7 @@ $colors: (
             text-align: center;
             div{
                 border-radius: 14px;
-                border: 0.5px solid black;
+                border: 0.5px solid map-get($bordes, colores);
                 margin: 10px 0;
             }
         }
@@ -118,7 +121,7 @@ $colors: (
                 max-width: 200px;
             }
             article{
-                border: 1px solid black;
+                border: 1px solid map-get($bordes, colores);
                 border-radius: 12px;
                 margin: $marginGeneral 0;
             }
@@ -162,6 +165,9 @@ $colors: (
 }
 
 @media screen and (min-width: 768px){                                 /*Desktop*/
+    $bordes:(
+        colores:rgb(156, 156, 156)
+    );
     %logo-animation-desk{
         display: block;
         margin-left: auto;
@@ -222,7 +228,7 @@ $colors: (
             text-align: center;
             div{
                 border-radius: 14px;
-                border: 0.5px solid black;
+                border: 0.5px solid map-get($bordes, colores);
                 margin: 10px 0;
             }
         }
@@ -284,7 +290,7 @@ $colors: (
                 max-width: 400px;
             }
             article{
-                border: 1px solid black;
+                border: 1px solid map-get($bordes, colores);
                 border-radius: 12px;
                 margin: $marginGeneral 0;
             }

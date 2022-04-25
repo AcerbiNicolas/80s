@@ -168,7 +168,7 @@
       text-align: center; }
       body .quest div {
         border-radius: 14px;
-        border: 0.5px solid black;
+        border: 0.5px solid #9c9c9c;
         margin: 10px 0; }
     body .sectMusic {
       display: inline-block;
@@ -211,7 +211,7 @@
         margin-bottom: 5px;
         max-width: 400px; }
       body .innova article {
-        border: 1px solid black;
+        border: 1px solid #9c9c9c;
         border-radius: 12px;
         margin: 10px 0; }
     body .row {
