@@ -28,8 +28,31 @@
 .btn--twitch:hover {
   background-color: cyan; }
 
+.btn--lemonCash:focus {
+  background-color: red; }
+
+.btn--twitch:focus {
+  background-color: red; }
+
 @media screen and (max-width: 767px) {
   /* Mobile*/
+  body .encabezado .primLogo, body .encabezado .logo, body footer .logo--footer, body footer .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center; }
+    body .encabezado .primLogo img, body .encabezado .logo img, body footer .logo--footer img, body footer .logo img {
+      animation: pulse 1s infinite; }
+  body .primTitulo, body .backleft {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 10px 30px;
+    border-radius: 3px;
+    border: 1px solid rgba(182, 182, 182, 0.315);
+    background-color: #f0f0f0; }
   body {
     font-family: "Inconsolata", monospace;
     display: flexbox;
@@ -37,22 +60,17 @@
     body .encabezado {
       margin-left: auto;
       margin-right: auto;
-      width: 100%; }
-      body .encabezado .logo {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: center;
-        text-align: center;
+      width: 100%;
+      text-align: center; }
+      body .encabezado .primLogo {
         animation: fadeInRightBig;
         animation-duration: 2s; }
-        body .encabezado .logo img {
-          animation: pulse 1s infinite; }
       body .encabezado .container-fluid {
         text-align: center; }
     body .indexSect {
       text-align: center;
-      margin: headerBac 20px; }
+      margin: 20px;
+      padding: 0px; }
     body .quest {
       margin-top: 10px;
       padding: 20px;
@@ -84,16 +102,9 @@
         margin: 10px 0; }
     body .row {
       margin: 40px; }
-    body .backleft {
-      display: block;
-      text-align: center;
-      justify-content: center;
-      margin: 10px 30px;
-      border-radius: 3px;
-      border: 1px solid rgba(182, 182, 182, 0.315);
+    body .primTitulo {
       animation: backInLeft;
-      animation-duration: 2s;
-      background-color: #f0f0f0; }
+      animation-duration: 2s; }
     body footer {
       display: block;
       flex-wrap: wrap;
@@ -101,8 +112,9 @@
       text-align: center;
       position: relative;
       bottom: 0; }
-      body footer .logo img {
-        animation: pulse 1s infinite; }
+      body footer .logo--footer {
+        animation: fadeInRightBig;
+        animation-duration: 2s; }
       body footer .redes {
         display: block;
         position: relative;
@@ -111,7 +123,24 @@
         text-align: start; } }
 
 @media screen and (min-width: 768px) {
-  /* Mobile*/
+  /*Desktop*/
+  body .encabezado .primLogo, body .encabezado .logo, body footer .logo--footer, body footer .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center; }
+    body .encabezado .primLogo img, body .encabezado .logo img, body footer .logo--footer img, body footer .logo img {
+      animation: pulse 1s infinite; }
+  body .primTitulo, body .backleft {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 10px 30px;
+    border-radius: 3px;
+    border: 1px solid rgba(182, 182, 182, 0.315);
+    background-color: #f0f0f0; }
   body {
     font-family: "Inconsolata", monospace;
     display: flexbox;
@@ -121,22 +150,17 @@
       margin-right: auto;
       width: 100%;
       text-align: center; }
-      body .encabezado .logo {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: center;
-        text-align: center;
+      body .encabezado .primLogo {
+        animation: fadeInLeftBig;
         animation-duration: 2s; }
-        body .encabezado .logo img {
-          animation: pulse 1s infinite; }
       body .encabezado .container-fluid {
         text-align: center; }
       body .encabezado .primLogo img {
         animation: pulse 1s infinite; }
     body .indexSect {
       text-align: center;
-      margin: 10px 20px; }
+      margin: 10px;
+      padding: 20px; }
     body .quest {
       margin-top: 10px;
       padding: 20px;
@@ -217,8 +241,9 @@
       text-align: center;
       position: relative;
       bottom: 0; }
-      body footer .logo img {
-        animation: pulse 1s infinite; }
+      body footer .logo--footer {
+        animation: fadeInLeftBig;
+        animation-duration: 2s; }
       body footer .redes {
         display: block;
         position: relative;

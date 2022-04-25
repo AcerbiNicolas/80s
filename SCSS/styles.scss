@@ -27,12 +27,38 @@ $colors: (
 }
 @each $name-color, $bgcolor in $colors {
     .btn--#{$name-color}:hover{
-        background-color: cyan;
+            background-color: cyan;
+    }
+}
+@each $name-color, $bgcolor in $colors {
+    .btn--#{$name-color}:focus{
+        background-color: red;
     }
 }
 
+
+
 @media screen and (max-width: 767px){                                 /* Mobile*/
-    
+    %logo-animation{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        justify-content: center;
+        text-align: center;
+        img{
+            animation: pulse 1s infinite;
+        }
+    }
+    %backleft{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        margin:10px 30px;
+        border-radius: 3px;
+        border: 1px solid rgba(182, 182, 182, 0.315);
+        background-color: $headerBackground;
+    }
     body{
         font-family: "Inconsolata", monospace;
         display: flexbox;
@@ -42,19 +68,14 @@ $colors: (
             margin-left: auto;
             margin-right: auto;
             width: $ancho;
-            .logo{
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                justify-content: center;
-                text-align: center;
+            text-align: center;
+            .primLogo{
+                @extend %logo-animation;
                 animation: fadeInRightBig; 
                 animation-duration: 2s;
-                
-                img{
-                    animation: pulse 1s infinite;
-                }
-                
+            }
+            .logo{
+                @extend %logo-animation;
             }
             .container-fluid{
                 text-align: center;
@@ -62,7 +83,7 @@ $colors: (
         }
         .indexSect{
             text-align: center;
-            margin: headerBac 20px;
+            @include sizes(20px, 0px);
         }
         .quest{
             margin-top: 10px;
@@ -105,16 +126,13 @@ $colors: (
         .row{
             margin: $marginGeneral*4;
         }
-        .backleft{
-            display: block;
-            text-align: center;
-            justify-content: center;
-            margin:10px 30px;
-            border-radius: 3px;
-            border: 1px solid rgba(182, 182, 182, 0.315);
+        .primTitulo{
+            @extend %backleft;
             animation: backInLeft; 
             animation-duration: 2s;
-            background-color: $headerBackground;
+        }
+        .backleft{
+            @extend %backleft;
         }
         footer{
             display: block;
@@ -123,10 +141,13 @@ $colors: (
             text-align: center;
             position:relative;
             bottom: 0;
+            .logo--footer{
+                @extend %logo-animation;
+                animation: fadeInRightBig; 
+                animation-duration: 2s;
+            }
             .logo{
-                img{
-                    animation: pulse 1s infinite;
-                }
+                @extend %logo-animation;
             }
             .redes{
                 display: block;
@@ -140,8 +161,28 @@ $colors: (
     }
 }
 
-@media screen and (min-width: 768px){                                 /* Mobile*/
-    
+@media screen and (min-width: 768px){                                 /*Desktop*/
+    %logo-animation-desk{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        justify-content: center;
+        text-align: center;
+        img{
+            animation: pulse 1s infinite;
+        }
+    }
+    %backleft{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        margin:10px 30px;
+        border-radius: 3px;
+        border: 1px solid rgba(182, 182, 182, 0.315);
+        
+        background-color: $headerBackground;
+    }
     body{
         font-family: "Inconsolata", monospace;
         display: flexbox;
@@ -152,18 +193,13 @@ $colors: (
             margin-right: auto;
             width: $ancho;
             text-align: center;
-            .logo{
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                justify-content: center;
-                text-align: center;
+            .primLogo{
+                animation: fadeInLeftBig; 
                 animation-duration: 2s;
-                
-                img{
-                    animation: pulse 1s infinite;
-                }
-                
+                @extend %logo-animation-desk;
+            }
+            .logo{
+                @extend %logo-animation-desk;
             }
             .container-fluid{
                 text-align: center;
@@ -177,7 +213,7 @@ $colors: (
         }
         .indexSect{
             text-align: center;
-            margin: $marginGeneral 20px;
+            @include sizes($marginGeneral, 20px);;
         }
         .quest{
             margin-top: 10px;
@@ -283,10 +319,13 @@ $colors: (
             text-align: center;
             position:relative;
             bottom: 0;
+            .logo--footer{
+                @extend %logo-animation-desk;
+                animation: fadeInLeftBig; 
+                animation-duration: 2s;
+            }
             .logo{
-                img{
-                    animation: pulse 1s infinite;
-                }
+                @extend %logo-animation-desk;
             }
             .redes{
                 display: block;
