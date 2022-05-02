@@ -6,7 +6,7 @@ $marginGeneral:10px;
 
 $colors: (
     lemonCash: #15ff0063,
-    twitch: #9200957c,
+    twitch: #a700aa96,
 ); 
 @mixin sizes($margin, $padding) {
     margin: $margin;
@@ -20,8 +20,8 @@ $colors: (
         display:inline-block;
         cursor:pointer;
         color:#000000;
-        font-size:17px;
-        @include sizes(0px, 10px 11px);
+        font-size:15px;
+        @include sizes(5px 2px, 5px 2px);
         text-decoration:none;
     }
 }
@@ -38,7 +38,8 @@ $colors: (
 
 
 
-@media screen and (max-width: 767px){                                 /* Mobile*/
+
+@media screen and (max-width: 767px){                         /* Mobile*/
     $bordes:(
         colores:rgb(0, 0, 0)
     );
@@ -105,7 +106,6 @@ $colors: (
         .carousel{
             img{
                 border-radius: 30px;
-                max-height: 200px;
             }
             position: relative;
             margin: $marginGeneral*4 $marginGeneral*2;
@@ -137,6 +137,10 @@ $colors: (
         .backleft{
             @extend %backleft;
         }
+        .divider{
+            bottom: 0;
+            margin-bottom: 0;
+        }
         footer{
             display: block;
             flex-wrap: wrap;
@@ -145,8 +149,10 @@ $colors: (
             position:relative;
             bottom: 0;
             .logo--footer{
-                @extend %logo-animation;
-                animation: fadeInRightBig; 
+                @extend %logo-animation;    
+                margin-bottom: 0px;
+                padding-top: 4px;
+                animation: fadeInRightBig;
                 animation-duration: 2s;
             }
             .logo{
@@ -164,7 +170,7 @@ $colors: (
     }
 }
 
-@media screen and (min-width: 768px){                                 /*Desktop*/
+@media screen and (min-width: 768px){                     /*Desktop*/
     $bordes:(
         colores:rgb(156, 156, 156)
     );
@@ -251,7 +257,7 @@ $colors: (
                 text-align: center;
             }
             margin: $marginGeneral * 3;
-            margin-bottom: 400px;
+            margin-bottom: 50px;
         }
         .medio{
             margin-left: 250px;
@@ -261,13 +267,13 @@ $colors: (
                 justify-content: center;
                 text-align: center;
                 .carousel-item{
+                    justify-content: center;
+                    text-align: center;
                     img{
+                        place-content: center center;
                         border-radius: 40px;
-                        max-height: 400px;
                     }
-                    
                 }
-                
                 position: relative;
             }
             margin-bottom: 10px;
@@ -318,7 +324,12 @@ $colors: (
             animation: fadeInRightBig;
             animation-duration: 2s;
         }
+        .divider{
+            bottom: 0;
+            margin-bottom: 0;
+        }
         footer{
+            background-color: $headerBackground;
             display: block;
             flex-wrap: wrap;
             width: $ancho;
@@ -327,19 +338,20 @@ $colors: (
             bottom: 0;
             .logo--footer{
                 @extend %logo-animation-desk;
+                margin-bottom: 0px;
+                padding-top: 4px;
                 animation: fadeInLeftBig; 
                 animation-duration: 2s;
             }
             .logo{
                 @extend %logo-animation-desk;
+                margin-bottom: 0px;
+                padding-top: 4px;
             }
             .redes{
                 display: block;
                 position: relative;
                 text-align: end;
-            }
-            .copy{
-                text-align: start;
             }
         }
     }

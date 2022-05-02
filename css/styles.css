@@ -5,21 +5,21 @@
   display: inline-block;
   cursor: pointer;
   color: #000000;
-  font-size: 17px;
-  margin: 0px;
-  padding: 10px 11px;
+  font-size: 15px;
+  margin: 5px 2px;
+  padding: 5px 2px;
   text-decoration: none; }
 
 .btn--twitch {
-  background-color: #9200957c;
+  background-color: #a700aa96;
   border-radius: 28px;
   border: 1px solid #18ab2900;
   display: inline-block;
   cursor: pointer;
   color: #000000;
-  font-size: 17px;
-  margin: 0px;
-  padding: 10px 11px;
+  font-size: 15px;
+  margin: 5px 2px;
+  padding: 5px 2px;
   text-decoration: none; }
 
 .btn--lemonCash:hover {
@@ -86,8 +86,7 @@
       position: relative;
       margin: 40px 20px; }
       body .carousel img {
-        border-radius: 30px;
-        max-height: 200px; }
+        border-radius: 30px; }
     body .innova {
       text-align: center;
       margin: 30px; }
@@ -105,6 +104,9 @@
     body .primTitulo {
       animation: backInLeft;
       animation-duration: 2s; }
+    body .divider {
+      bottom: 0;
+      margin-bottom: 0; }
     body footer {
       display: block;
       flex-wrap: wrap;
@@ -113,6 +115,8 @@
       position: relative;
       bottom: 0; }
       body footer .logo--footer {
+        margin-bottom: 0px;
+        padding-top: 4px;
         animation: fadeInRightBig;
         animation-duration: 2s; }
       body footer .redes {
@@ -177,7 +181,7 @@
       margin-left: 0;
       margin-right: 0;
       margin: 30px;
-      margin-bottom: 400px; }
+      margin-bottom: 50px; }
       body .sectMusic #main {
         display: inline-block; }
       body .sectMusic div {
@@ -195,9 +199,12 @@
         justify-content: center;
         text-align: center;
         position: relative; }
-        body .medio .carousel .carousel-item img {
-          border-radius: 40px;
-          max-height: 400px; }
+        body .medio .carousel .carousel-item {
+          justify-content: center;
+          text-align: center; }
+          body .medio .carousel .carousel-item img {
+            place-content: center center;
+            border-radius: 40px; }
     body .carousel-control-next {
       margin-right: 200px; }
     body .carousel-control-prev {
@@ -234,7 +241,11 @@
       text-align: center;
       animation: fadeInRightBig;
       animation-duration: 2s; }
+    body .divider {
+      bottom: 0;
+      margin-bottom: 0; }
     body footer {
+      background-color: #f0f0f0;
       display: block;
       flex-wrap: wrap;
       width: 100%;
@@ -242,11 +253,14 @@
       position: relative;
       bottom: 0; }
       body footer .logo--footer {
+        margin-bottom: 0px;
+        padding-top: 4px;
         animation: fadeInLeftBig;
         animation-duration: 2s; }
+      body footer .logo {
+        margin-bottom: 0px;
+        padding-top: 4px; }
       body footer .redes {
         display: block;
         position: relative;
-        text-align: end; }
-      body footer .copy {
-        text-align: start; } }
+        text-align: end; } }
