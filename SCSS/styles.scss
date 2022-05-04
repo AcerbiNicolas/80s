@@ -1,358 +1,377 @@
 @import "index";
-$headerBackground: #f0f0f0;
+$headerBackground: #2800ef;
 $costados: 40px;
 $ancho: 100%;
-$marginGeneral:10px;
+$marginGeneral: 10px;
 
 $colors: (
     lemonCash: #15ff0063,
     twitch: #a700aa96,
-); 
+);
 @mixin sizes($margin, $padding) {
     margin: $margin;
     padding: $padding;
 }
 @each $name-color, $bgcolor in $colors {
     .btn--#{$name-color} {
-        background-color: $bgcolor;
-        border-radius:28px;
-        border:1px solid #18ab2900;
-        display:inline-block;
-        cursor:pointer;
-        color:#000000;
-        font-size:15px;
-        @include sizes(5px 2px, 5px 2px);
-        text-decoration:none;
+    background-color: $bgcolor;
+    border: 1px solid #18ab2900;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-size: 15px;
+    @include sizes(5px 2px, 5px 2px);
+    text-decoration: none;
     }
 }
 @each $name-color, $bgcolor in $colors {
-    .btn--#{$name-color}:hover{
-            background-color: cyan;
+    .btn--#{$name-color}:hover {
+    background-color: cyan;
     }
 }
 @each $name-color, $bgcolor in $colors {
-    .btn--#{$name-color}:focus{
-        background-color: red;
+    .btn--#{$name-color}:focus {
+    background-color: red;
     }
 }
 
-
-
-
-@media screen and (max-width: 767px){                         /* Mobile*/
-    $bordes:(
-        colores:rgb(0, 0, 0)
+@media screen and (max-width: 767px) {                          /* Mobile*/
+    $bordes: (
+    colores: rgb(0, 0, 0),
     );
-    %logo-animation{
-        display: block;
+    %logo-animation {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+    img {
+        animation: pulse 1s infinite;
+    }
+    }
+    %backleft {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    color: #e5d202;
+    margin: 10px 30px;
+    border: 1px solid rgba(182, 182, 182, 0.315);
+    background-color: $headerBackground;
+    }
+    body {
+    font-family: "Inconsolata", monospace;
+    display: flexbox;
+    flex-wrap: wrap;
+
+    .encabezado {
         margin-left: auto;
         margin-right: auto;
+        width: $ancho;
+        text-align: center;
+        .primLogo {
+        @extend %logo-animation;
+        animation: fadeInRightBig;
+        animation-duration: 2s;
+        }
+        .logo {
+        @extend %logo-animation;
+        }
+        .container-fluid {
+        text-align: center;
+        }
+    }
+    h1{
+        color: #e09d00;
+        padding-bottom: 2px;
+    }
+    h3,h2{
+        color: #da00d2;
+    }
+    p {
+        color: #0251b9;
+    }
+    .indexSect {
+        text-align: center;
+        @include sizes(20px, 0px);
+    }
+    .quest {
+        margin-top: 10px;
+        padding: 20px;
         margin-bottom: 10px;
-        justify-content: center;
         text-align: center;
-        img{
-            animation: pulse 1s infinite;
+        div {
+        border-radius: 14px;
+        border: 0.5px solid map-get($bordes, colores);
+        margin: 10px 0;
         }
     }
-    %backleft{
+    .sectMusic {
+      margin: $marginGeneral * 3;
+    }
+    .carousel {
+        img {
+        border-radius: 30px;
+        }
+        position: relative;
+      margin: $marginGeneral * 4 $marginGeneral * 2;
+    }
+    .innova {
+        text-align: center;
+      margin: $marginGeneral * 3;
+        p {
+        margin: $marginGeneral;
+        }
+        img {
+        margin-bottom: 5px;
+        max-width: 200px;
+        }
+        article {
+        border: 1px solid map-get($bordes, colores);
+        margin: $marginGeneral 0;
+        }
+    }
+    .row {
+      margin: $marginGeneral * 4;
+    }
+    .primTitulo {
+        @extend %backleft;
+        animation: backInLeft;
+        animation-duration: 2s;
+    }
+    .backleft {
+        color: #e09d00;
+        @extend %backleft;
+    }
+    .divider {
+        bottom: 0;
+        margin-bottom: 0;
+    }
+    footer {
         display: block;
-        text-align: center;
-        justify-content: center;
-        margin:10px 30px;
-        border-radius: 3px;
-        border: 1px solid rgba(182, 182, 182, 0.315);
-        background-color: $headerBackground;
-    }
-    body{
-        font-family: "Inconsolata", monospace;
-        display: flexbox;
         flex-wrap: wrap;
-
-        .encabezado{
-            margin-left: auto;
-            margin-right: auto;
-            width: $ancho;
-            text-align: center;
-            .primLogo{
-                @extend %logo-animation;
-                animation: fadeInRightBig; 
-                animation-duration: 2s;
-            }
-            .logo{
-                @extend %logo-animation;
-            }
-            .container-fluid{
-                text-align: center;
-            }
+        width: $ancho;
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        background-color: $headerBackground;
+        .logo--footer {
+        @extend %logo-animation;
+        margin-bottom: 0px;
+        padding-top: 4px;
+        animation: fadeInRightBig;
+        animation-duration: 2s;
         }
-        .indexSect{
-            text-align: center;
-            @include sizes(20px, 0px);
+        .logo {
+        @extend %logo-animation;
         }
-        .quest{
-            margin-top: 10px;
-            padding: 20px;
-            margin-bottom: 10px;
-            text-align: center;
-            div{
-                border-radius: 14px;
-                border: 0.5px solid map-get($bordes, colores);
-                margin: 10px 0;
-            }
+        .redes {
+        display: block;
+        position: relative;
+        text-align: end;
         }
-        .sectMusic{
-            margin: $marginGeneral * 3;
+        .copy {
+        text-align: start;
         }
-        .carousel{
-            img{
-                border-radius: 30px;
-            }
-            position: relative;
-            margin: $marginGeneral*4 $marginGeneral*2;
-        }
-        .innova{
-            text-align: center;
-            margin: $marginGeneral*3;
-            p{
-                margin: $marginGeneral;
-            }
-            img{
-                margin-bottom: 5px;
-                max-width: 200px;
-            }
-            article{
-                border: 1px solid map-get($bordes, colores);
-                border-radius: 12px;
-                margin: $marginGeneral 0;
-            }
-        }
-        .row{
-            margin: $marginGeneral*4;
-        }
-        .primTitulo{
-            @extend %backleft;
-            animation: backInLeft; 
-            animation-duration: 2s;
-        }
-        .backleft{
-            @extend %backleft;
-        }
-        .divider{
-            bottom: 0;
-            margin-bottom: 0;
-        }
-        footer{
-            display: block;
-            flex-wrap: wrap;
-            width: $ancho;
-            text-align: center;
-            position:relative;
-            bottom: 0;
-            .logo--footer{
-                @extend %logo-animation;    
-                margin-bottom: 0px;
-                padding-top: 4px;
-                animation: fadeInRightBig;
-                animation-duration: 2s;
-            }
-            .logo{
-                @extend %logo-animation;
-            }
-            .redes{
-                display: block;
-                position: relative;
-                text-align: end;
-            }
-            .copy{
-                text-align: start;
-            }
-        }
+    }
     }
 }
 
-@media screen and (min-width: 768px){                     /*Desktop*/
-    $bordes:(
-        colores:rgb(156, 156, 156)
+@media screen and (min-width: 768px) {                              /*Desktop*/
+    $bordes: (
+    colores: rgb(156, 156, 156),
     );
-    %logo-animation-desk{
-        display: block;
+    %logo-animation-desk {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+    img {
+        animation: pulse 1s infinite;
+    }
+    }
+    %backleft {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 10px 30px;
+    border: 1px solid rgba(182, 182, 182, 0.315);
+
+    background-color: $headerBackground;
+    }
+    body {
+    font-family: "Inconsolata", monospace;
+    display: flexbox;
+    flex-wrap: wrap;
+
+    .encabezado {
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 10px;
-        justify-content: center;
+        width: $ancho;
         text-align: center;
-        img{
+        .primLogo {
+        animation: fadeInLeftBig;
+        animation-duration: 2s;
+        @extend %logo-animation-desk;
+        }
+        .logo {
+            @extend %logo-animation-desk;
+        }
+        .container-fluid {
+        text-align: center;
+        }
+        .primLogo {
+        img {
             animation: pulse 1s infinite;
         }
+        }
     }
-    %backleft{
+    h1{
+        color: #e09d00;
+        padding-bottom: 2px;
+    }
+    h3 {
+        color: #da00d2;
+    }
+    p {
+        color: #0251b9;
+    }
+    .indexSect {
+        text-align: center;
+        @include sizes($marginGeneral, 20px);
+    }
+    .quest {
+        margin-top: 10px;
+        padding: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        div {
+        border: 0.5px solid map-get($bordes, colores);
+        margin: 10px 0;
+        }
+    }
+    .sectMusic {
+        display: inline-block;
+        justify-content: center;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        #main {
+        display: inline-block;
+        }
+        div {
+        display: inline-block;
+        width: 300px;
+        }
+        iframe {
+        flex-wrap: wrap;
+        width: 300px;
+        text-align: center;
+        }
+      margin: $marginGeneral * 3;
+        margin-bottom: 50px;
+    }
+    .medio {
+        margin-left: 250px;
+        margin-right: 250px;
+
+        .carousel {
+        justify-content: center;
+        text-align: center;
+        .carousel-item {
+            justify-content: center;
+            text-align: center;
+            img {
+            place-content: center center;
+            border-radius: 40px;
+            }
+        }
+        position: relative;
+        }
+        margin-bottom: 10px;
+    }
+    .carousel-control-next {
+        margin-right: 200px;
+    }
+    .carousel-control-prev {
+        margin-left: 200px;
+    }
+
+    .innova {
+        text-align: center;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        margin: $marginGeneral * 3;
+
+        p {
+        margin: $marginGeneral * 6;
+        }
+        img {
+        margin-bottom: 5px;
+        max-width: 400px;
+        }
+        article {
+            border: 1px solid map-get($bordes, colores);
+            width: 500px;
+            margin: $marginGeneral * 4;
+        }
+    }
+    .row {
+      margin: $marginGeneral * 4;
+    }
+    .backleft {
+        color: #e09d00;
         display: block;
         text-align: center;
         justify-content: center;
-        margin:10px 30px;
-        border-radius: 3px;
+        margin: 10px 30px;
         border: 1px solid rgba(182, 182, 182, 0.315);
-        
         background-color: $headerBackground;
     }
-    body{
-        font-family: "Inconsolata", monospace;
-        display: flexbox;
+    .primTitulo {
+        display: block;
+        justify-content: center;
+        margin: 10px 30px;
+        border: 1px solid rgba(182, 182, 182, 0.315);
+        background-color: $headerBackground;
+        text-align: center;
+        animation: fadeInRightBig;
+        animation-duration: 2s;
+    }
+    .divider {
+        bottom: 0;
+        margin-bottom: 0;
+    }
+    footer {
+        background-color: $headerBackground;
+        display: block;
         flex-wrap: wrap;
-
-        .encabezado{
-            margin-left: auto;
-            margin-right: auto;
-            width: $ancho;
-            text-align: center;
-            .primLogo{
-                animation: fadeInLeftBig; 
-                animation-duration: 2s;
-                @extend %logo-animation-desk;
-            }
-            .logo{
-                @extend %logo-animation-desk;
-            }
-            .container-fluid{
-                text-align: center;
-            }
-            .primLogo{
-                img{
-                    animation: pulse 1s infinite;
-                };
-                
-            }
+        width: $ancho;
+        text-align: center;
+        position: relative;
+        bottom: 0;
+        .logo--footer {
+        @extend %logo-animation-desk;
+        margin-bottom: 0px;
+        padding-top: 4px;
+        animation: fadeInLeftBig;
+        animation-duration: 2s;
         }
-        .indexSect{
-            text-align: center;
-            @include sizes($marginGeneral, 20px);;
+        .logo {
+        @extend %logo-animation-desk;
+        margin-bottom: 0px;
+        padding-top: 4px;
         }
-        .quest{
-            margin-top: 10px;
-            padding: 20px;
-            margin-bottom: 10px;
-            text-align: center;
-            div{
-                border-radius: 14px;
-                border: 0.5px solid map-get($bordes, colores);
-                margin: 10px 0;
-            }
+        .redes {
+        display: block;
+        position: relative;
+        text-align: end;
         }
-        .sectMusic{
-            display: inline-block;
-            justify-content: center;
-            text-align: center;
-            margin-left: 0;
-            margin-right: 0;
-            #main{
-                display: inline-block;
-            }
-            div{
-                display: inline-block;
-                width: 300px;
-            }
-            iframe{
-                flex-wrap: wrap;
-                width: 300px;
-                text-align: center;
-            }
-            margin: $marginGeneral * 3;
-            margin-bottom: 50px;
-        }
-        .medio{
-            margin-left: 250px;
-            margin-right: 250px;
-            
-            .carousel{
-                justify-content: center;
-                text-align: center;
-                .carousel-item{
-                    justify-content: center;
-                    text-align: center;
-                    img{
-                        place-content: center center;
-                        border-radius: 40px;
-                    }
-                }
-                position: relative;
-            }
-            margin-bottom: 10px;
-        }
-        .carousel-control-next{
-            margin-right: 200px;
-        }
-        .carousel-control-prev{
-            margin-left: 200px;
-        }
-        
-        .innova{
-            text-align: center;
-            margin: $marginGeneral*3;
-            p{
-                margin: $marginGeneral*6;
-            }
-            img{
-                margin-bottom: 5px;
-                max-width: 400px;
-            }
-            article{
-                border: 1px solid map-get($bordes, colores);
-                border-radius: 12px;
-                margin: $marginGeneral 0;
-            }
-        }
-        .row{
-            margin: $marginGeneral*4;
-        }
-        .backleft{
-            display: block;
-            text-align: center;
-            justify-content: center;
-            margin:10px 30px;
-            border-radius: 3px;
-            border: 1px solid rgba(182, 182, 182, 0.315);
-            background-color: $headerBackground;
-        }
-        .primTitulo{
-            display: block;
-            justify-content: center;
-            margin:10px 30px;
-            border-radius: 3px;
-            border: 1px solid rgba(182, 182, 182, 0.315);
-            background-color: $headerBackground;
-            text-align: center;
-            animation: fadeInRightBig;
-            animation-duration: 2s;
-        }
-        .divider{
-            bottom: 0;
-            margin-bottom: 0;
-        }
-        footer{
-            background-color: $headerBackground;
-            display: block;
-            flex-wrap: wrap;
-            width: $ancho;
-            text-align: center;
-            position:relative;
-            bottom: 0;
-            .logo--footer{
-                @extend %logo-animation-desk;
-                margin-bottom: 0px;
-                padding-top: 4px;
-                animation: fadeInLeftBig; 
-                animation-duration: 2s;
-            }
-            .logo{
-                @extend %logo-animation-desk;
-                margin-bottom: 0px;
-                padding-top: 4px;
-            }
-            .redes{
-                display: block;
-                position: relative;
-                text-align: end;
-            }
-        }
+    }
     }
 }
